@@ -1,14 +1,13 @@
 package uk.ac.ncl.cs.zequn.swa.core;
 
 import uk.ac.ncl.cs.zequn.swa.avg.AvgCalculateImpl;
+import uk.ac.ncl.cs.zequn.swa.filesystem.LogAccess;
 import uk.ac.ncl.cs.zequn.swa.model.Result;
-import uk.ac.ncl.cs.zequn.swa.model.SingleInput;
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorListener;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.SQLException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
@@ -29,15 +28,16 @@ public class MainController {
     private final AtomicReference<Result> resultList;
     private final ResultOutput resultOutput;
     private boolean calFlag = false;
-    private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000);
+    //private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),new LogAccess("diskWrite"),new LogAccess("diskRead"));
+    private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),null,null);
 
-    public MainController(Strategy strategy,long time,long period,ResultOutput resultOutputListener){
+    public MainController(Strategy strategy,long time,long period,ResultOutput resultOutputListener) throws SQLException {
         this.resultOutput = resultOutputListener;
         this.time = time;
         this.period = period;
         this.numOfTuples = period/time;
-        System.out.println("debug!!!!!!!!!!!!!!"+numOfTuples);
-        inMemoryStore = new InMemoryStore();
+        //define max tuple in memory
+        inMemoryStore = new InMemoryStore(false,100*60*11,memoryMonitor);
         this.strategy = strategy;
         switch (strategy){
             case AVG:
@@ -55,7 +55,7 @@ public class MainController {
                 Tuple oldTuple = null;
                 inMemoryStore.put(newTuple);
                 if(inMemoryStore.getSize()>numOfTuples){
-                    System.out.println("debug!!!!!!!!!!!!!!"+inMemoryStore.getSize());
+                    //System.out.println("remove !!!!!!!!!!!!!!"+inMemoryStore.getSize());
                     oldTuple = inMemoryStore.get();
                 }
                 if(resultList.get() != null){
@@ -72,24 +72,28 @@ public class MainController {
         memoryMonitor.addListener(new MemoryMonitorListener() {
             @Override
             public void monitor() {
-                System.out.println(inMemoryStore.getRealSize());
+                System.out.println("total input:"+inMemoryStore.getRealSize());
             }
         });
         memoryMonitor.addListener(new MemoryMonitorListener() {
             @Override
             public void monitor() {
-                System.out.println(inMemoryStore.getSize());
+                System.out.println("total tuples"+inMemoryStore.getSize());
             }
         });
         memoryMonitor.start();
     }
-    public void offer(SingleInput input){
+    public void offer(double input){
         if(!calFlag) {
             calFlag = true;
             new Timer().scheduleAtFixedRate(timerTask,0,time);
         }
         factory.offer(input);
         memoryMonitor.inputRateCheck();
+    }
+
+    public void end(){
+        memoryMonitor.flushLog();
     }
 
 

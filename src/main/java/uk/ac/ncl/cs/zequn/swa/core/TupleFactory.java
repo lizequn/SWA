@@ -1,9 +1,6 @@
 package uk.ac.ncl.cs.zequn.swa.core;
 
-import uk.ac.ncl.cs.zequn.swa.model.SingleInput;
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
-
-import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @author ZequnLi
@@ -19,7 +16,7 @@ public class TupleFactory {
         this.calculate = calculate;
     }
 
-    public void offer(SingleInput input){
+    public void offer(double input){
         synchronized(lock){
             if(null == tuple){
                 tuple = new Tuple(0,0);

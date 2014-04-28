@@ -1,28 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/TupleAccess.java" line="71" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" name="Default" comment="" />
+    <list default="true" id="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/CSVWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao4H2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/LogAccess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_177.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_30.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/TupleAccess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="DELETED" beforePath="E:\ideaproject\SWA\src\main\java\uk\ac\ncl\cs\zequn\swa\model\SingleInput.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalculateImpl.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalculateImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Calculate.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Calculate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Config.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitor.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SWA.iml" afterPath="$PROJECT_DIR$/SWA.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SWA.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Test.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398275679347" ignored="false" />
-    <file path="/fragment.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1396536123497" ignored="false" />
+    <file path="/Test.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398590188227" ignored="false" />
+    <file path="/fragment.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398638377122" ignored="false" />
     <file path="/B2M.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1396535954627" ignored="false" />
-    <file path="/MemoryMonitor.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398276578206" ignored="false" />
-    <file path="/InMemoryStore.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398272411227" ignored="false" />
+    <file path="/MemoryMonitor.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398605433419" ignored="false" />
+    <file path="/InMemoryStore.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398636583440" ignored="false" />
     <file path="/Tuple.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398118470057" ignored="false" />
     <file path="$PROJECT_DIR$/../thesiswork/src/main/java/com/mkyong/rest/HorseService.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1397986599868" ignored="false" />
     <file path="/HorseService.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1397986599126" ignored="false" />
     <file path="$PROJECT_DIR$/../thesiswork/pom.xml" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1397986805269" ignored="false" />
     <file path="/MemoryMonitorListener.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1397987712549" ignored="false" />
     <file path="/Config.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398118253215" ignored="false" />
-    <file path="/Calculate.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398274727207" ignored="false" />
+    <file path="/Calculate.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398608708180" ignored="false" />
     <file path="/SingleInput.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398271646012" ignored="false" />
     <file path="/strategy.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398117937976" ignored="false" />
-    <file path="/MainController.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398277126548" ignored="false" />
-    <file path="/TupleFactory.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398275157682" ignored="false" />
-    <file path="/AvgCalculateImpl.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398274756292" ignored="false" />
+    <file path="/MainController.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398617661766" ignored="false" />
+    <file path="/TupleFactory.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398608728866" ignored="false" />
+    <file path="/AvgCalculateImpl.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398608677526" ignored="false" />
     <file path="/Result.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398120611063" ignored="false" />
     <file path="/ResultOutput.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398271024133" ignored="false" />
+    <file path="/Dummy.txt" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398689958115" ignored="false" />
+    <file path="$PROJECT_DIR$/../CheapestDep/src/main/java/uk/ac/ncl/cs/cheapestdep/main.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398690102994" ignored="false" />
+    <file path="$PROJECT_DIR$/../CheapestDep/src/main/java/uk/ac/ncl/cs/cheapestdep/model/Service.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398477908632" ignored="false" />
+    <file path="$PROJECT_DIR$/../CheapestDep/src/main/java/uk/ac/ncl/cs/cheapestdep/model/Platform.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398478340733" ignored="false" />
+    <file path="$PROJECT_DIR$/../CheapestDep/src/main/java/uk/ac/ncl/cs/cheapestdep/model/Security.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398477597847" ignored="false" />
+    <file path="/Security.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398467364532" ignored="false" />
+    <file path="/Platform.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398478118656" ignored="false" />
+    <file path="/Service.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398477883166" ignored="false" />
+    <file path="$PROJECT_DIR$/../CheapestDep/src/main/java/uk/ac/ncl/cs/cheapestdep/model/DataTransfer.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398477543557" ignored="false" />
+    <file path="/DataTransfer.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398477527990" ignored="false" />
+    <file path="$PROJECT_DIR$/../CheapestDep/src/main/java/uk/ac/ncl/cs/cheapestdep/model/SecurityChecker.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398478633010" ignored="false" />
+    <file path="/pom.xml" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398542556434" ignored="false" />
+    <file path="/Dao.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398519817313" ignored="false" />
+    <file path="/TupleAccess.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398637855258" ignored="false" />
+    <file path="/CSVWriter.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398539351200" ignored="false" />
+    <file path="/Dao4H2.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398542719850" ignored="false" />
+    <file path="/LogAccess.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398637741192" ignored="false" />
+    <file path="$PROJECT_DIR$/../H2Server/pom.xml" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398542564584" ignored="false" />
+    <file path="$PROJECT_DIR$/../H2Server/src/main/java/H2Server.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398547294446" ignored="false" />
+    <file path="/H2Server.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398547292347" ignored="false" />
+    <file path="$PROJECT_DIR$/../H2Server/src/main/java/MemoryMonitor.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398547261113" ignored="false" />
+    <file path="$PROJECT_DIR$/../H2Server/src/main/java/B2M.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398547270793" ignored="false" />
+    <file path="/main.java" changelist="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" time="1398690102994" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +132,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="InMemoryStore.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="54" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="28" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+            <state line="41" column="45" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tuple.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/Tuple.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="76" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TupleAccess.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/TupleAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="38" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,10 +171,26 @@
       <file leaf-file-name="MainController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="32" selection-start="3409" selection-end="3409" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="39" column="51" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TupleFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="44" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogAccess.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/LogAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="32" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,7 +198,25 @@
       <file leaf-file-name="MemoryMonitor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="81" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.6532258">
+            <state line="20" column="46" selection-start="602" selection-end="602" vertical-scroll-proportion="-0.14123581">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="20" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dao4H2.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao4H2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="22" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,35 +229,43 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryTuple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/strategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/Tuple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalcuateImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/ResultOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/SingleInput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Calculate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalculateImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/CSVWriter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao4H2.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalculateImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Calculate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/LogAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/TupleAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="215" />
+    <option name="y" value="395" />
+    <option name="width" value="1771" />
+    <option name="height" value="1005" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -341,6 +459,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="filesystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SWA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SWA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -377,8 +525,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,7 +557,7 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="uk.ac.ncl.cs.zequn.swa.Test" />
-      <option name="VM_PARAMETERS" value="-Xms64m -Xmx128m" />
+      <option name="VM_PARAMETERS" value="-Xmx64m" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -426,6 +574,72 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TupleAccess" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.ncl.cs.zequn.swa.filesystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.ac.ncl.cs.zequn.swa.filesystem.TupleAccess" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SWA" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LogAccess" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.ncl.cs.zequn.swa.filesystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.ac.ncl.cs.zequn.swa.filesystem.LogAccess" />
+      <option name="VM_PARAMETERS" value="-Xmx128m" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SWA" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="InMemoryStore" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.ncl.cs.zequn.swa.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.ac.ncl.cs.zequn.swa.core.InMemoryStore" />
+      <option name="VM_PARAMETERS" value="-Xmx64m" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SWA" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -520,12 +734,18 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TupleAccess" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LogAccess" />
+      <item index="3" class="java.lang.String" itemvalue="Application.InMemoryStore" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.InMemoryStore" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TupleAccess" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LogAccess" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -534,6 +754,29 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\Zzz\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="47f3b60b-579c-4cf7-bea4-e40f4cdc4e5d" name="Default" comment="" />
@@ -543,8 +786,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="215" y="395" width="1771" height="1005" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -557,19 +800,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.47332186" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52667814" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21357518" sideWeight="0.24268502" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7557756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -638,112 +881,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="403" selection-end="403" vertical-scroll-proportion="0.2877698">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/util/B2M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="218" selection-end="218" vertical-scroll-proportion="0.31654677" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="154" selection-end="154" vertical-scroll-proportion="0.23104693" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Strategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="102" selection-end="110" vertical-scroll-proportion="0.0">
+        <state line="74" column="32" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+        <state line="8" column="45" selection-start="207" selection-end="207" vertical-scroll-proportion="0.3764706">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/ResultOutput.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="131" selection-end="131" vertical-scroll-proportion="0.29166666">
+        <state line="16" column="4" selection-start="582" selection-end="725" vertical-scroll-proportion="0.8050314">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/CSVWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="15" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="214" selection-end="220" vertical-scroll-proportion="0.4532578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="533" selection-end="533" vertical-scroll-proportion="1.3144476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalculateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="400" selection-end="400" vertical-scroll-proportion="-0.40509915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/SingleInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Calculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="266" selection-end="266" vertical-scroll-proportion="0.407932">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="28" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="32" selection-start="3409" selection-end="3409" vertical-scroll-proportion="0.0">
+        <state line="42" column="47" selection-start="1160" selection-end="1160" vertical-scroll-proportion="2.1132076">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/Calculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="48" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/avg/AvgCalculateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="47" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/TupleFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="44" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/model/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="76" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/InMemoryStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="54" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao4H2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="22" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="20" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/TupleAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="38" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/filesystem/LogAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="32" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/core/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="51" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="45" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ncl/cs/zequn/swa/monitor/MemoryMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="81" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.6532258">
+        <state line="20" column="46" selection-start="602" selection-end="602" vertical-scroll-proportion="-0.14123581">
           <folding />
         </state>
       </provider>
