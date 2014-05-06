@@ -1,10 +1,12 @@
 package uk.ac.ncl.cs.zequn.swa.model;
 
+import java.io.Serializable;
+
 /**
  * @author ZequnLi
  *         Date: 14-4-20
  */
-public class Tuple {
+public class Tuple implements Serializable {
     private int size;
     private double result;
 

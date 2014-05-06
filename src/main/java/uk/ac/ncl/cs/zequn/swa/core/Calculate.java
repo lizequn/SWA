@@ -9,6 +9,6 @@ import uk.ac.ncl.cs.zequn.swa.model.Tuple;
  */
 public interface Calculate {
     Tuple calInfo4Tuple(Tuple tuple,double input);
-    Result calResult(Result result,long realSize,Tuple newTuple,Tuple oldTuple);
-    String getResult(Result result,long size);
+    double calResult(double result,long realSize,Tuple newTuple,Tuple oldTuple);
+    String getResult(double result,long size);
 }

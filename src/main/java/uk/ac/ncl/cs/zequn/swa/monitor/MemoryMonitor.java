@@ -6,6 +6,7 @@ import uk.ac.ncl.cs.zequn.swa.util.B2M;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -20,18 +21,25 @@ public class MemoryMonitor {
     private long inputNum;
     private long diskRead;
     private long diskWrite;
+    private long latencyBefore;
+    private long totalLatency;
+    private long latencyNum;
+
     private final Object lock = new Object();
     private final Object diskLock1 = new Object();
     private final Object diskLock2 = new Object();
+    private final Object latencyLock = new Object();
     private final List<MemoryMonitorListener> listenerList = new ArrayList<MemoryMonitorListener>();
     private final LogAccess logAccess;
     private final LogAccess diskWriteLog;
     private final LogAccess diskReadLog;
-    public MemoryMonitor(long interval,LogAccess logAccess,LogAccess logAccess1,LogAccess logAccess2) throws SQLException {
+    private final LogAccess latencyLog;
+    public MemoryMonitor(long interval,LogAccess logAccess,LogAccess logAccess1,LogAccess logAccess2,LogAccess logAccess3) throws SQLException {
         this.interval = interval;
         this.logAccess = logAccess;
         diskWriteLog = logAccess1;
         diskReadLog = logAccess2;
+        latencyLog= logAccess3;
         if(null!=logAccess){
             this.logAccess.init();
         }
@@ -40,6 +48,9 @@ public class MemoryMonitor {
         }
         if(null!=diskReadLog){
             this.diskReadLog.init();
+        }
+        if(null!=latencyLog){
+            this.latencyLog.init();
         }
 
         flag.set(true);
@@ -61,6 +72,17 @@ public class MemoryMonitor {
     public void diskWriteCount(){
         synchronized (diskLock2){
             diskWrite++;
+        }
+    }
+    public void latencyBefore(){
+        synchronized (latencyLock){
+            latencyBefore = System.nanoTime();
+        }
+    }
+    public void latencyAfter(){
+        synchronized (latencyLock){
+            totalLatency += System.nanoTime()-latencyBefore;
+            latencyNum++;
         }
     }
 
@@ -88,17 +110,28 @@ public class MemoryMonitor {
                synchronized (diskLock2){
                    if(null != diskWriteLog){
                        diskWriteLog.insertTuple(counter+"",diskWrite+"");
+                       System.out.println("disk Write rate: "+ (double)diskWrite/(interval/1000));
+                       diskWrite =0;
                    }
-                   System.out.println("disk Write rate: "+ (double)diskWrite/(interval/1000));
-                   diskWrite =0;
+
                }
                synchronized (diskLock1){
                    if(null != diskReadLog){
                        diskReadLog.insertTuple(counter+"",diskRead+"");
+                       System.out.println("disk Read rate: "+ (double)diskRead/(interval/1000));
+                       diskRead =0;
                    }
-                   System.out.println("disk Read rate: "+ (double)diskRead/(interval/1000));
 
-                   diskRead =0;
+               }
+               synchronized (latencyLock){
+                   if(null!= latencyLog){
+                       long average = TimeUnit.MICROSECONDS.convert(totalLatency / latencyNum,TimeUnit.NANOSECONDS);
+                       latencyLog.insertTuple(counter+"",average+"");
+                       System.out.println("average Latency: "+average);
+                       totalLatency = 0;
+                       latencyNum = 0;
+                   }
+
                }
                if(listenerList.size()>0){
                    for(MemoryMonitorListener listener : listenerList){
@@ -124,6 +157,9 @@ public class MemoryMonitor {
         if(null!= diskReadLog){
             diskReadLog.output2CSV("D://",diskReadLog.getTable());
             diskWriteLog.output2CSV("D://",diskWriteLog.getTable());
+        }
+        if(null!=latencyLog){
+            latencyLog.output2CSV("D://",latencyLog.getTable());
         }
 
     }

@@ -18,21 +18,21 @@ public class AvgCalculateImpl implements Calculate{
     }
 
     @Override
-    public Result calResult(Result result,long realSize,Tuple newTuple, Tuple oldTuple) {
-        if(result == null){
-            return new Result(Strategy.AVG,newTuple.getResult());
+    public double calResult(double result,long realSize,Tuple newTuple, Tuple oldTuple) {
+        if(result <= 0){
+            return newTuple.getResult();
         }
         if(oldTuple == null){
-            double sum = result.getResult() + newTuple.getResult();
-            return new Result(Strategy.AVG,sum);
+            double sum = result + newTuple.getResult();
+            return sum;
         }
-        double oldResult = result.getResult();
+        double oldResult = result;
         double newResult = oldResult - oldTuple.getResult()+newTuple.getResult();
-        return new Result(Strategy.AVG,newResult);
+        return newResult;
     }
 
     @Override
-    public String getResult(Result result, long size) {
-        return result.getResult()/size +"";
+    public String getResult(double result, long size) {
+        return result/size +"";
     }
 }

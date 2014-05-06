@@ -7,6 +7,7 @@ import uk.ac.ncl.cs.zequn.swa.model.Tuple;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorListener;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,19 +26,19 @@ public class MainController {
     private final long period;
     private final TimerTask timerTask;
     private final long numOfTuples;
-    private final AtomicReference<Result> resultList;
+    private final AtomicReference<Double> resultList;
     private final ResultOutput resultOutput;
     private boolean calFlag = false;
-    //private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),new LogAccess("diskWrite"),new LogAccess("diskRead"));
-    private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),null,null);
+    private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),new LogAccess("diskWrite"),new LogAccess("diskRead"),new LogAccess("latency"));
+    //private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),null,null,new LogAccess("latency"));
 
-    public MainController(Strategy strategy,long time,long period,ResultOutput resultOutputListener) throws SQLException {
+    public MainController(Strategy strategy,long time,long period,ResultOutput resultOutputListener) throws SQLException, IOException {
         this.resultOutput = resultOutputListener;
         this.time = time;
         this.period = period;
         this.numOfTuples = period/time;
         //define max tuple in memory
-        inMemoryStore = new InMemoryStore(false,100*60*11,memoryMonitor);
+        inMemoryStore = new InMemoryStore(true ,10*60*1,memoryMonitor);
         this.strategy = strategy;
         switch (strategy){
             case AVG:
@@ -46,10 +47,11 @@ public class MainController {
                 throw new IllegalStateException();
         }
         factory = new TupleFactory(strategy,calculate);
-        this.resultList = new AtomicReference<Result>();
+        this.resultList = new AtomicReference<Double>();
         timerTask = new TimerTask() {
             @Override
             public void run() {
+                memoryMonitor.latencyBefore();
                 Tuple newTuple = factory.getResult();
                 if(newTuple == null) return;
                 Tuple oldTuple = null;
@@ -61,13 +63,21 @@ public class MainController {
                 if(resultList.get() != null){
                     resultList.set(calculate.calResult(resultList.get(),inMemoryStore.getRealSize(),newTuple,oldTuple));
                 } else {
-                    resultList.set(calculate.calResult(null,inMemoryStore.getRealSize(),newTuple,oldTuple));
+                    resultList.set(calculate.calResult(-1,inMemoryStore.getRealSize(),newTuple,oldTuple));
                 }
 
                 resultOutput.output(calculate.getResult(resultList.get(),inMemoryStore.getRealSize())+"");
+                memoryMonitor.latencyAfter();
             }
         };
 
+        TimerTask gc = new TimerTask() {
+            @Override
+            public void run() {
+                System.gc();
+            }
+        };
+        new Timer().scheduleAtFixedRate(gc,0,1000*60*5);
 
         memoryMonitor.addListener(new MemoryMonitorListener() {
             @Override
@@ -78,7 +88,7 @@ public class MainController {
         memoryMonitor.addListener(new MemoryMonitorListener() {
             @Override
             public void monitor() {
-                System.out.println("total tuples"+inMemoryStore.getSize());
+                System.out.println("total tuples:"+inMemoryStore.getSize());
             }
         });
         memoryMonitor.start();
