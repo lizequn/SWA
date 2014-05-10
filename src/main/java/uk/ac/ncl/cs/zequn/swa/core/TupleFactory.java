@@ -7,12 +7,10 @@ import uk.ac.ncl.cs.zequn.swa.model.Tuple;
  *         Date: 14-4-21
  */
 public class TupleFactory {
-    private final Strategy strategy;
     private Tuple  tuple;
     private Calculate calculate;
     private Object lock = new Object();
-    public TupleFactory(Strategy strategy,Calculate calculate){
-        this.strategy = strategy;
+    public TupleFactory(Calculate calculate){
         this.calculate = calculate;
     }
 
@@ -21,7 +19,7 @@ public class TupleFactory {
             if(null == tuple){
                 tuple = new Tuple(0,0);
             }
-            calculate.calInfo4Tuple(tuple,input);
+            calculate.updateCurrentTuple(tuple, input);
         }
     }
     public Tuple getResult(){

@@ -1,7 +1,7 @@
 package uk.ac.ncl.cs.zequn.swa.filesystem;
 
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
-import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
+import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorImpl;
 
 import java.sql.*;
 
@@ -65,7 +65,7 @@ public class TupleAccess4MySql implements TupleAccess {
     }
 
     public static void main(String [] args) throws SQLException {
-        MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("mysqlinsert"),null,null,null);
+        MemoryMonitorImpl memoryMonitor = new MemoryMonitorImpl(1000,new LogAccess("mysqlinsert"),null,null,null);
         Tuple tuple = new Tuple(12,3222);
         long counter = 0;
         TupleAccess4MySql access = new TupleAccess4MySql();

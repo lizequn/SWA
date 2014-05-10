@@ -4,7 +4,7 @@ import uk.ac.ncl.cs.zequn.swa.filequeue.FileQueue;
 import uk.ac.ncl.cs.zequn.swa.filequeue.FileQueueImpl;
 import uk.ac.ncl.cs.zequn.swa.filequeue.ObjectConverterImpl;
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
-import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
+import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorImpl;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +38,7 @@ public class TupleAccess4FQ implements TupleAccess {
 
 
     public static void main(String [] args) throws SQLException, IOException {
-        MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("fqinsert"),null,null,null);
+        MemoryMonitorImpl memoryMonitor = new MemoryMonitorImpl(1000,new LogAccess("fqinsert"),null,null,null);
         Tuple tuple = new Tuple(12,3222);
         long counter = 0;
         TupleAccess access = new TupleAccess4FQ("D://","db");

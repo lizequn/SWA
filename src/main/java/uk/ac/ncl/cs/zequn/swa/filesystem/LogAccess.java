@@ -1,8 +1,5 @@
 package uk.ac.ncl.cs.zequn.swa.filesystem;
 
-import uk.ac.ncl.cs.zequn.swa.model.Tuple;
-import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -94,7 +91,7 @@ public class LogAccess {
     }
 
 //    public static void main(String [] args) throws SQLException {
-//        MemoryMonitor memoryMonitor = new MemoryMonitor(1000);
+//        MemoryMonitorImpl memoryMonitor = new MemoryMonitorImpl(1000);
 //        memoryMonitor.start();
 //        LogAccess access = new LogAccess("log");
 //        access.init();

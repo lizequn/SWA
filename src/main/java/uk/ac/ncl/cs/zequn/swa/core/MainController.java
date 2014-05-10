@@ -2,9 +2,9 @@ package uk.ac.ncl.cs.zequn.swa.core;
 
 import uk.ac.ncl.cs.zequn.swa.avg.AvgCalculateImpl;
 import uk.ac.ncl.cs.zequn.swa.filesystem.LogAccess;
-import uk.ac.ncl.cs.zequn.swa.model.Result;
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
+import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorImpl;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorListener;
 
 import java.io.IOException;
@@ -29,8 +29,8 @@ public class MainController {
     private final AtomicReference<Double> resultList;
     private final ResultOutput resultOutput;
     private boolean calFlag = false;
-    private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),new LogAccess("diskWrite"),new LogAccess("diskRead"),new LogAccess("latency"));
-    //private final MemoryMonitor memoryMonitor = new MemoryMonitor(1000,new LogAccess("memory"),null,null,new LogAccess("latency"));
+    private final MemoryMonitor memoryMonitor = new MemoryMonitorImpl(1000,new LogAccess("memory"),new LogAccess("diskWrite"),new LogAccess("diskRead"),new LogAccess("latency"));
+    //private final MemoryMonitorImpl memoryMonitor = new MemoryMonitorImpl(1000,new LogAccess("memory"),null,null,new LogAccess("latency"));
 
     public MainController(Strategy strategy,long time,long period,ResultOutput resultOutputListener) throws SQLException, IOException {
         this.resultOutput = resultOutputListener;
@@ -46,7 +46,7 @@ public class MainController {
             default:
                 throw new IllegalStateException();
         }
-        factory = new TupleFactory(strategy,calculate);
+        factory = new TupleFactory(calculate);
         this.resultList = new AtomicReference<Double>();
         timerTask = new TimerTask() {
             @Override
@@ -61,23 +61,23 @@ public class MainController {
                     oldTuple = inMemoryStore.get();
                 }
                 if(resultList.get() != null){
-                    resultList.set(calculate.calResult(resultList.get(),inMemoryStore.getRealSize(),newTuple,oldTuple));
+                    resultList.set(calculate.updateResult(resultList.get(), inMemoryStore.getRealSize(), newTuple, oldTuple));
                 } else {
-                    resultList.set(calculate.calResult(-1,inMemoryStore.getRealSize(),newTuple,oldTuple));
+                    resultList.set(calculate.updateResult(-1, inMemoryStore.getRealSize(), newTuple, oldTuple));
                 }
 
                 resultOutput.output(calculate.getResult(resultList.get(),inMemoryStore.getRealSize())+"");
                 memoryMonitor.latencyAfter();
             }
         };
-
-        TimerTask gc = new TimerTask() {
-            @Override
-            public void run() {
-                System.gc();
-            }
-        };
-        new Timer().scheduleAtFixedRate(gc,0,1000*60*5);
+//        garbage collect
+//        TimerTask gc = new TimerTask() {
+//            @Override
+//            public void run() {
+//                System.gc();
+//            }
+//        };
+//        new Timer().scheduleAtFixedRate(gc,0,1000*60*5);
 
         memoryMonitor.addListener(new MemoryMonitorListener() {
             @Override
@@ -99,15 +99,10 @@ public class MainController {
             new Timer().scheduleAtFixedRate(timerTask,0,time);
         }
         factory.offer(input);
-        memoryMonitor.inputRateCheck();
+        memoryMonitor.inputRateCount();
     }
 
     public void end(){
         memoryMonitor.flushLog();
     }
-
-
-
-
-
 }

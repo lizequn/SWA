@@ -1,8 +1,6 @@
 package uk.ac.ncl.cs.zequn.swa.avg;
 
 import uk.ac.ncl.cs.zequn.swa.core.Calculate;
-import uk.ac.ncl.cs.zequn.swa.core.Strategy;
-import uk.ac.ncl.cs.zequn.swa.model.Result;
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
 
 /**
@@ -11,14 +9,14 @@ import uk.ac.ncl.cs.zequn.swa.model.Tuple;
  */
 public class AvgCalculateImpl implements Calculate{
     @Override
-    public Tuple calInfo4Tuple(Tuple tuple, double input) {
+    public Tuple updateCurrentTuple(Tuple tuple, double input) {
         tuple.setResult(tuple.getResult()+input);
         tuple.setSize(tuple.getSize() + 1);
         return tuple;
     }
 
     @Override
-    public double calResult(double result,long realSize,Tuple newTuple, Tuple oldTuple) {
+    public double updateResult(double result, long realSize, Tuple newTuple, Tuple oldTuple) {
         if(result <= 0){
             return newTuple.getResult();
         }

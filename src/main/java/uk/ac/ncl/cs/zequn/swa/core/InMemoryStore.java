@@ -2,9 +2,9 @@ package uk.ac.ncl.cs.zequn.swa.core;
 
 import uk.ac.ncl.cs.zequn.swa.filesystem.TupleAccess;
 import uk.ac.ncl.cs.zequn.swa.filesystem.TupleAccess4FQ;
-import uk.ac.ncl.cs.zequn.swa.filesystem.TupleAccess4MySql;
 import uk.ac.ncl.cs.zequn.swa.model.Tuple;
 import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitor;
+import uk.ac.ncl.cs.zequn.swa.monitor.MemoryMonitorImpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -26,9 +26,13 @@ public class InMemoryStore {
     public InMemoryStore(boolean enableDiskStore,long maxSize,MemoryMonitor memoryMonitor) throws SQLException, IOException {
         this.enableDiskStore = enableDiskStore;
         this.maxSize = maxSize;
+        if(enableDiskStore){
 //        this.tupleAccess = new TupleAccess4MySql();
         this.tupleAccess = new TupleAccess4FQ("D://","db");
         this.tupleAccess.init();
+        }else {
+            this.tupleAccess = null;
+        }
         this.memoryMonitor = memoryMonitor;
     }
 
@@ -94,51 +98,51 @@ public class InMemoryStore {
         return queue.size()>= Config.MAX_MEMORY_SIZE;
     }
 
-    public static void main(String []args) throws SQLException, InterruptedException {
-//        final long stopTime = 2*60*10;
-//        final MemoryMonitor memoryMonitor1 = new MemoryMonitor(1000,new LogAccess("abc"),null,null);
-//        final InMemoryStore inMemoryStore = new InMemoryStore(true,1000000000,memoryMonitor1);
-//        TimerTask timerTask = new TimerTask() {
-//            @Override
-//            public void run() {
-//                    if(inMemoryStore.getSize() >= 1000*60){
-//                        inMemoryStore.getQueue().peek().setResult(123123);
-//                    }else {
-//                        inMemoryStore.put(new Tuple(222,222));
-//                    }
-//                    memoryMonitor1.inputRateCheck();
-//                }
-//        };
-//        Timer timer = new Timer();
-//        timer.scheduleAtFixedRate(timerTask, 0, 1);
-//        memoryMonitor1.start();
-//        Thread thread = new Thread(new Runnable() {
-//            boolean stop = false;
-//            long timeCounter = 0;
+//    public static void main(String []args) throws SQLException, InterruptedException {
+////        final long stopTime = 2*60*10;
+////        final MemoryMonitorImpl memoryMonitor1 = new MemoryMonitorImpl(1000,new LogAccess("abc"),null,null);
+////        final InMemoryStore inMemoryStore = new InMemoryStore(true,1000000000,memoryMonitor1);
+////        TimerTask timerTask = new TimerTask() {
+////            @Override
+////            public void run() {
+////                    if(inMemoryStore.getSize() >= 1000*60){
+////                        inMemoryStore.getQueue().peek().setResult(123123);
+////                    }else {
+////                        inMemoryStore.put(new Tuple(222,222));
+////                    }
+////                    memoryMonitor1.inputRateCheck();
+////                }
+////        };
+////        Timer timer = new Timer();
+////        timer.scheduleAtFixedRate(timerTask, 0, 1);
+////        memoryMonitor1.start();
+////        Thread thread = new Thread(new Runnable() {
+////            boolean stop = false;
+////            long timeCounter = 0;
+////
+////            @Override
+////            public void run() {
+////                while (!stop){
+////                    timeCounter++;
+////                    if(timeCounter>=stopTime){
+////                        stop = true;
+////                    }
+////                    try {
+////                        Thread.sleep(1000);
+////                    } catch (InterruptedException e) {
+////                        e.printStackTrace();
+////                    }
+////                }
+////            }
+////        });
+////        thread.start();
+////        System.out.println("wait");
+////
+////        thread.join();
+////        timer.cancel();
+////        memoryMonitor1.flushLog();
+////        System.out.println("end");
 //
-//            @Override
-//            public void run() {
-//                while (!stop){
-//                    timeCounter++;
-//                    if(timeCounter>=stopTime){
-//                        stop = true;
-//                    }
-//                    try {
-//                        Thread.sleep(1000);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        });
-//        thread.start();
-//        System.out.println("wait");
-//
-//        thread.join();
-//        timer.cancel();
-//        memoryMonitor1.flushLog();
-//        System.out.println("end");
-
-    }
+//    }
 
 }
